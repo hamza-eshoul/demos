@@ -7,3 +7,7 @@ export const RESEND_DELAY_MS = 400;
 export const STATE_POLL_MS = 1000;
 
 export const POLL_WINDOW_MS = 15000;
+
+export const DEMO_VIDEO_SRC = '/videos/orders-duplicates-demo.mp4';
+
+export const DEMO_VIDEO_POSTER = '/videos/orders-duplicates-poster.jpg';

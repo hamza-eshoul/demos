@@ -4,6 +4,7 @@ import { useOrdersDemo } from '../hooks/useOrdersDemo';
 import DemoHeader from '../components/header/DemoHeader';
 import ScenarioActions from '../components/header/ScenarioActions';
 import StateErrorCard from '../components/header/StateErrorCard';
+import DemoVideo from '../components/header/DemoVideo';
 import ComparisonGrid from '../components/comparison/ComparisonGrid';
 import BrokenSideCard from '../components/comparison/BrokenSideCard';
 import FixedSideCard from '../components/comparison/FixedSideCard';
@@ -18,16 +19,21 @@ const OrdersDuplicatesPage = () => {
 
   return (
     <main className="mx-auto flex max-w-6xl flex-col gap-12 px-4 py-12 md:py-20">
-      <div className="flex flex-col gap-8">
-        <div className="flex items-start justify-between gap-4">
-          <DemoHeader />
+      <div className="flex flex-col gap-6">
+        <div className="flex justify-end">
           <ThemeToggle theme={theme} onToggle={toggleTheme} />
         </div>
-        <ScenarioActions
-          activeScenario={demo.activeScenario}
-          onRun={demo.run}
-        />
-        {demo.isError && <StateErrorCard />}
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,480px)] lg:items-center">
+          <div className="flex flex-col gap-8">
+            <DemoHeader />
+            <ScenarioActions
+              activeScenario={demo.activeScenario}
+              onRun={demo.run}
+            />
+            {demo.isError && <StateErrorCard />}
+          </div>
+          <DemoVideo />
+        </div>
       </div>
       <ComparisonGrid>
         <BrokenSideCard side={demo.broken} />
