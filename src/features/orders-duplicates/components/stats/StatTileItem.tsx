@@ -7,7 +7,7 @@ interface StatTileItemProps {
 }
 
 const StatTileItem = ({ tile }: StatTileItemProps) => (
-  <div className="flex flex-col gap-0.5 rounded-lg bg-muted/50 p-3">
+  <div className="flex flex-col gap-0.5 rounded-lg bg-muted/50 p-3 ring-1 ring-border/60 dark:bg-muted/70">
     <span className="text-xs text-muted-foreground">{tile.label}</span>
     <span
       className={cn(
@@ -17,7 +17,7 @@ const StatTileItem = ({ tile }: StatTileItemProps) => (
     >
       {tile.value}
     </span>
-    <span className="text-[11px] leading-tight text-muted-foreground">
+    <span className="text-xs leading-tight text-muted-foreground">
       {tile.caption}
     </span>
   </div>

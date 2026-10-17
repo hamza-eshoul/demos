@@ -1,15 +1,13 @@
+import type { Theme } from '@/stores/themeStore';
+
 const DARK_QUERY = '(prefers-color-scheme: dark)';
 
 export class ThemeUtils {
-  static syncWithSystem(): void {
-    const media = window.matchMedia(DARK_QUERY);
-    ThemeUtils.apply(media.matches);
-    media.addEventListener('change', (event) =>
-      ThemeUtils.apply(event.matches),
-    );
+  static systemTheme(): Theme {
+    return window.matchMedia(DARK_QUERY).matches ? 'dark' : 'light';
   }
 
-  private static apply(isDark: boolean): void {
-    document.documentElement.classList.toggle('dark', isDark);
+  static apply(theme: Theme): void {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   }
 }
