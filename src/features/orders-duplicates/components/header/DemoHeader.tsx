@@ -15,8 +15,8 @@ const DemoHeader = () => (
     <p className="max-w-2xl text-lg text-pretty text-muted-foreground">
       Shops like Shopify and Stripe resend an order when your automation answers
       too slowly. Press a button below and watch two real n8n workflows handle
-      the same test order: a typical first setup on the left, one built properly
-      on the right.
+      the same test order, side by side: a typical first setup and one built
+      properly.
     </p>
   </header>
 );
