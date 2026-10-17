@@ -6,7 +6,7 @@ const DemoHeader = () => (
       <Badge className="bg-brand/10 text-brand">Automation demo</Badge>
       <Badge variant="outline" className="gap-1.5">
         <span className="size-1.5 rounded-full bg-safe" />
-        Live on my own server
+        Live on my own server, resets nightly
       </Badge>
     </div>
     <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance md:text-5xl">
