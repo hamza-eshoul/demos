@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { ThemeUtils } from '@/lib/ThemeUtils';
 
 export type Theme = 'light' | 'dark';
 
@@ -12,7 +11,7 @@ interface ThemeStore {
 export const useThemeStore = create<ThemeStore>()(
   persist(
     (set) => ({
-      theme: ThemeUtils.systemTheme(),
+      theme: 'light',
       toggleTheme: () =>
         set((state) => ({ theme: state.theme === 'dark' ? 'light' : 'dark' })),
     }),
