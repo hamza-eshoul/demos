@@ -38,7 +38,7 @@ const AdminStatTiles = ({ summary }: AdminStatTilesProps) => {
       {tiles.map((tile) => (
         <div
           key={tile.label}
-          className="flex flex-col gap-0.5 rounded-lg bg-muted/50 p-3 ring-1 ring-border/60 dark:bg-muted/70"
+          className="flex flex-col gap-0.5 rounded-xl border bg-card p-4 shadow-sm"
         >
           <span className="text-xs text-muted-foreground">{tile.label}</span>
           <span
