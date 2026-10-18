@@ -10,7 +10,7 @@ import BrokenSideCard from '../components/comparison/BrokenSideCard';
 import FixedSideCard from '../components/comparison/FixedSideCard';
 import FixesSection from '../components/sections/FixesSection';
 import OfferSection from '../components/sections/OfferSection';
-import PageFooter from '../components/sections/PageFooter';
+import PageFooter from '@/components/PageFooter';
 
 const OrdersDuplicatesPage = () => {
   const demo = useOrdersDemo();
